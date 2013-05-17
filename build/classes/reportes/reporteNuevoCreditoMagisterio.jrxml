@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7114f1c9-51e4-4e5c-b50e-e202fd8ab1e1">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="dependencia" class="java.lang.String"/>
+	<parameter name="logoPCET" class="java.io.InputStream"/>
+	<parameter name="logoTlaxcala" class="java.io.InputStream"/>
+	<parameter name="totalInteres" class="java.lang.String"/>
+	<parameter name="totalCapital" class="java.lang.String"/>
+	<parameter name="totalTotal" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="rfc" class="java.lang.String"/>
+	<field name="noempleado" class="java.lang.String"/>
+	<field name="concepto" class="java.lang.String"/>
+	<field name="captotal" class="java.lang.String"/>
+	<field name="inttotal" class="java.lang.String"/>
+	<field name="abonocapital" class="java.lang.String"/>
+	<field name="abonointeres" class="java.lang.String"/>
+	<field name="saldocapital" class="java.lang.String"/>
+	<field name="saldointeres" class="java.lang.String"/>
+	<field name="quincena" class="java.lang.String"/>
+	<field name="qnaaplica" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="eb4e88c1-0e20-4586-ba8b-26e12798d9fc" x="240" y="16" width="253" height="34"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE NUEVOS CREDITOS OTORGADOS]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="21b42163-7086-43a1-b1cf-c384478dd54a" x="583" y="3" width="169" height="60"/>
+				<imageExpression><![CDATA[$P{logoPCET}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b48b095f-a6e7-42ec-a8b1-8bdbb3c57f7c" x="12" y="3" width="162" height="65"/>
+				<imageExpression><![CDATA[$P{logoTlaxcala}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement uuid="62c57975-1352-4f99-bfc2-c9efb85db072" x="6" y="0" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{dependencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ebc6460b-54d2-4ec2-a671-fdde2f63ebe2" x="583" y="0" width="150" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="29" y="8" width="15" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="114" y="8" width="50" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[CONCEPTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="68" y="8" width="35" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[NO. EMP.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="174" y="8" width="54" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[IMPORTE TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="354" y="8" width="37" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ABONO INT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="426" y="8" width="37" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[SLDO CAP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="564" y="8" width="38" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[QUINCENA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="698" y="8" width="35" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="249" y="8" width="36" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[INT TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="308" y="8" width="46" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[ABONO CAP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="504" y="8" width="30" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[SLDO INT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="71fde913-ac48-4ffc-9a81-1db9ea534569" x="621" y="8" width="38" height="10"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[APLICA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="5d0b2b69-3649-48d9-887c-853c3e6537ba" x="12" y="4" width="742" height="11"/>
+			</rectangle>
+			<textField pattern="###0">
+				<reportElement uuid="0186ec2d-8984-4f83-a2a2-95cf09301de5" x="19" y="4" width="49" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rfc}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement uuid="0752adae-da63-400a-b87f-466ed969c9c8" x="81" y="4" width="22" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noempleado}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement uuid="eea054e6-c1c6-49c4-b94e-bd452f05d343" x="120" y="4" width="26" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{concepto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement uuid="7a933ea4-b48d-4ee7-9642-404ed5445f59" x="249" y="4" width="49" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{inttotal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00">
+				<reportElement uuid="5f037284-381d-43f1-b123-0b38a2030b46" x="302" y="4" width="52" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{abonocapital}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.00;-###0.00">
+				<reportElement uuid="06d006ce-d404-43e8-8a54-c49d9f5cad18" x="174" y="4" width="66" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{captotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bdf8acb2-014d-4144-b803-ae586ffd6413" x="354" y="4" width="56" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{abonointeres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e8ea0b0c-065f-4c89-81a5-3f3c94bb4c25" x="426" y="4" width="46" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saldocapital}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e06f0947-b521-4032-b8e9-f7e670a92bd6" x="493" y="6" width="59" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saldointeres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b106ae08-2ec8-4aa4-b96e-932cfede94a2" x="564" y="6" width="57" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quincena}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="681c2f3c-ab23-4742-9752-9da2aa62f1b4" x="621" y="6" width="61" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{qnaaplica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="40411b90-5295-4aa2-ba65-b5c9618c1d98" x="696" y="5" width="37" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="4" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="59" splitType="Stretch"/>
+	</summary>
+</jasperReport>

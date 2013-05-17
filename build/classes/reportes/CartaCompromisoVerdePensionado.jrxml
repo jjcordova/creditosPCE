@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="solicitudCredito" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b5eb42eb-2664-45a4-9b34-8944983f2b07">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="375"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="rfc" class="java.lang.String"/>
+	<parameter name="domicilio" class="java.lang.String"/>
+	<parameter name="nempleado" class="java.lang.String"/>
+	<parameter name="nplaza" class="java.lang.String"/>
+	<parameter name="paterno" class="java.lang.String"/>
+	<parameter name="materno" class="java.lang.String"/>
+	<parameter name="estado" class="java.lang.String"/>
+	<parameter name="municipio" class="java.lang.String"/>
+	<parameter name="localidad" class="java.lang.String"/>
+	<parameter name="NombreDirector" class="java.lang.String"/>
+	<parameter name="Identificacion" class="java.lang.String"/>
+	<parameter name="EdoCivil" class="java.lang.String"/>
+	<parameter name="Institucion" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="logoTlaxcala" class="java.io.InputStream"/>
+	<parameter name="logoPCET" class="java.io.InputStream"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0f5d133a-1d98-4e18-bd33-7ca133055d21" x="177" y="21" width="204" height="20" forecolor="#000000" backcolor="#009900">
+					<property name="net.sf.jasperreports.export.pdf.tag.td"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTA COMPROMISO]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="b48b095f-a6e7-42ec-a8b1-8bdbb3c57f7c" x="12" y="4" width="162" height="65"/>
+				<imageExpression><![CDATA[$P{logoTlaxcala}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="21b42163-7086-43a1-b1cf-c384478dd54a" x="391" y="4" width="169" height="60"/>
+				<imageExpression><![CDATA[$P{logoPCET}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="553" splitType="Stretch">
+			<textField>
+				<reportElement uuid="12d2ae1c-e09b-4075-8e3c-4dcc0e3aca71" x="30" y="79" width="361" height="13"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NombreDirector}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e42d1299-5141-4ee9-8a8f-47e88c7158ad" x="84" y="162" width="284" height="15"/>
+				<textElement>
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre}+" "+$P{paterno}+" "+$P{materno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="02c45568-04c6-4b74-b2c7-e8c6397011e4" x="75" y="192" width="76" height="15"/>
+				<textElement>
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EdoCivil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="454b11ad-fe0e-4c35-8ed9-de449fd67948" x="295" y="192" width="147" height="15"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Institucion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c9b269fa-11f1-4020-bc2b-ad29a50b5e61" x="12" y="207" width="107" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rfc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="750b6e70-bf01-419c-aab7-a589344ec524" x="248" y="207" width="86" height="15"/>
+				<textElement>
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nempleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="233f26a4-2f6a-404b-95cc-3a19cccbb00d" x="420" y="207" width="110" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nplaza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4fe354eb-96b8-42c0-8090-fdb7c8b3c1b2" x="138" y="222" width="157" height="15"/>
+				<textElement>
+					<font size="8" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{domicilio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0ddce051-535d-4da0-aad8-744ef73ea750" x="389" y="222" width="141" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{localidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5c58b176-7724-4fd9-bc6d-da895e8fbe7c" x="94" y="237" width="113" height="15"/>
+				<textElement>
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{municipio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="0a8fab93-b6ab-490f-a7f9-dc3c75b4de96" x="290" y="237" width="171" height="15"/>
+				<textElement>
+					<font size="10" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estado}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0fd97843-54b0-4308-8516-8073ae891b1c" x="12" y="23" width="541" height="41"/>
+				<textElement textAlignment="Justified">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Formato de la Carta Compromiso que se establece en los Lineamientos para el Otorgamiento y Recuperación de Crédito de la Institución de Pensiones Civiles del Estado de Tlaxcala, publicados en el Periódico Oficial del Gobierno del Estado de Tlaxcala, el día 31 de enero de dos mil trece.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="da5cab95-25b9-49a5-989f-31b9216f4947" x="12" y="79" width="16" height="13"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d6ed07c-3085-42ed-b0ee-470022ed0da3" x="12" y="93" width="266" height="44"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECTOR GENERAL DE PENSIONES CIVILES
+DEL ESTADO DE TLAXCALA
+P R E S E N T E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="20c54d3a-16fd-4334-872a-1ff6ab3a982b" x="12" y="162" width="72" height="14"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[El que suscribe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2874e4b0-6b14-4b87-a493-97f7295d9bcb" x="384" y="162" width="146" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="10" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[, bajo protesta de decir verdad,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4e89f880-734a-43bb-9a26-f8f8caa57d67" x="12" y="177" width="372" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[comparezco para manifestar ser Mexicano (a), lo cual demuestro con el documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c7fc748e-0aa1-4aed-a039-097ad582c19f" x="12" y="192" width="63" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[; estado civil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="082f0017-5a72-4e41-9dbc-939feb869f4e" x="151" y="192" width="137" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[; Institución a la que pertenece]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1bcda225-a9ea-4283-b8dd-23d17a7dc6fc" x="442" y="192" width="88" height="15"/>
+				<textElement textAlignment="Justified">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[; con clave de RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a70b94ff-4db4-4a53-9507-50b8b8f459d7" x="119" y="207" width="126" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[; con número de empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c8d1f2cb-70e4-406d-ae33-8277c5608677" x="334" y="207" width="85" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[; número de plaza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="604a0e34-d311-4d58-b9d7-95426a10b501" x="12" y="222" width="126" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[, con domicilio ubicado en calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="319ae1ff-d771-44d0-9d03-dfdd3f537f8a" x="295" y="222" width="87" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[, de la población de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fd404960-3ff4-48d9-a043-21b71d4f6595" x="12" y="237" width="78" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[, del municipio de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9916cb6d-1552-4db7-9a04-1ef811d540b2" x="215" y="237" width="69" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[, del Estado de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="95ef97be-138e-4d0e-be84-904d67748f8d" x="12" y="301" width="529" height="29"/>
+				<textElement textAlignment="Justified">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Me comprometo ante Usted, a cubrir el pago del crédito que me ha sido otorgado y dar aviso a la  Institución dentro de los tres días hábiles siguientes al día en el que suceda el cambio de domicilio.]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="6bf46277-28f2-4a86-a0fa-fdaf3870a0ee" x="137" y="523" width="278" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="a2171ee5-4cbc-49ba-84b5-2c464be09cc5" x="12" y="341" width="529" height="51"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[En este acto quedo (amos) debidamente enterado (s) del alcance legal del compromiso adquirido, de acuerdo con lo dispuesto en el artículo 14 de los Lineamientos para el Otorgamiento y Recuperación de Crédito de Pensiones Civiles del Estado de Tlaxcala, otorgados a los servidores públicos, jubilados y pensionados de la Institución, así como para el intercambio de información sobre créditos, saldos y pagos entre ésta y las citadas dependencias y entidades públicas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8186be9c-cbad-45f3-930d-e19c2d23d15a" x="12" y="459" width="195" height="12"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[En la ciudad de Tlaxcala de Xicohténcatl, a los]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c7a89bc7-7d16-4890-b7df-c2e5f672fc96" x="135" y="530" width="285" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NOMBRE Y FIRMA DEL SERVIDOR PÚBLICO, JUBILADO O PENSIONADO]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b5748df7-7459-4912-a41c-44a198c3600c" x="215" y="459" width="326" height="12"/>
+				<textElement>
+					<font size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d9be5fd2-4223-499a-949c-ea2e11019e90" x="384" y="177" width="146" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{Identificacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>

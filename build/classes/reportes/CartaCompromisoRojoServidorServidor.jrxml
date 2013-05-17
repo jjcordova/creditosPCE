@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="solicitudCredito" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b5eb42eb-2664-45a4-9b34-8944983f2b07">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="288"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="rfc" class="java.lang.String"/>
+	<parameter name="domicilio" class="java.lang.String"/>
+	<parameter name="nempleado" class="java.lang.String"/>
+	<parameter name="nplaza" class="java.lang.String"/>
+	<parameter name="paterno" class="java.lang.String"/>
+	<parameter name="materno" class="java.lang.String"/>
+	<parameter name="estado" class="java.lang.String"/>
+	<parameter name="municipio" class="java.lang.String"/>
+	<parameter name="poblacion" class="java.lang.String"/>
+	<parameter name="Identificacion" class="java.lang.String"/>
+	<parameter name="EdoCivil" class="java.lang.String"/>
+	<parameter name="Institucion" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="nombre_aval" class="java.lang.String"/>
+	<parameter name="paterno_aval" class="java.lang.String"/>
+	<parameter name="materno_aval" class="java.lang.String"/>
+	<parameter name="Identificacion_aval" class="java.lang.String"/>
+	<parameter name="EdoCivil_aval" class="java.lang.String"/>
+	<parameter name="Institucion_aval" class="java.lang.String"/>
+	<parameter name="rfc_aval" class="java.lang.String"/>
+	<parameter name="nempleado_aval" class="java.lang.String"/>
+	<parameter name="nplaza_aval" class="java.lang.String"/>
+	<parameter name="domicilio_aval" class="java.lang.String"/>
+	<parameter name="poblacion_aval" class="java.lang.String"/>
+	<parameter name="municipio_aval" class="java.lang.String"/>
+	<parameter name="estado_aval" class="java.lang.String"/>
+	<parameter name="logoPCET" class="java.io.InputStream"/>
+	<parameter name="logoTlaxcala" class="java.io.InputStream"/>
+	<parameter name="NombreDirector" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="0f5d133a-1d98-4e18-bd33-7ca133055d21" x="177" y="21" width="204" height="20" forecolor="#000000" backcolor="#009900">
+					<property name="net.sf.jasperreports.export.pdf.tag.td"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARTA COMPROMISO]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="21b42163-7086-43a1-b1cf-c384478dd54a" x="389" y="10" width="169" height="60"/>
+				<imageExpression><![CDATA[$P{logoPCET}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement uuid="b48b095f-a6e7-42ec-a8b1-8bdbb3c57f7c" x="10" y="10" width="162" height="65"/>
+				<imageExpression><![CDATA[$P{logoTlaxcala}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="502" splitType="Stretch">
+			<textField>
+				<reportElement uuid="8c2072d7-8aa0-4243-97ed-b5b57f310b32" x="73" y="333" width="306" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre_aval}+" "+$P{paterno_aval}+" "+$P{materno_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="ea880ace-12f7-49e8-a7e0-f8a3f225d5c2" x="317" y="345" width="128" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Identificacion_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c1ace302-223a-43ed-ba67-773697605971" x="11" y="357" width="91" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EdoCivil_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5f9dedd3-4d4d-40e1-b1ff-ecf0aed6bc52" x="217" y="357" width="209" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Institucion_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="16448674-1b2e-4f0a-bf7b-e07b28787753" x="11" y="369" width="100" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rfc_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e1ca1c4e-2c5b-4091-9ce7-fb2cde013477" x="213" y="369" width="45" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nempleado_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4f079fb4-9100-4ad7-973e-2c5e8810b284" x="337" y="369" width="160" height="12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nplaza_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="976b0c3a-e476-48ac-b26d-84b9c3a4a3f2" x="129" y="381" width="151" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{domicilio_aval}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0fd97843-54b0-4308-8516-8073ae891b1c" x="12" y="3" width="503" height="31"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Formato de la Carta Compromiso que se establece en los Lineamientos para el Otorgamiento y Recuperación de Crédito de la Institución de Pensiones Civiles del Estado de Tlaxcala, publicados en el Periódico Oficial del Gobierno del Estado de Tlaxcala, el día 31 de Enero del año dos mil trece.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d6ed07c-3085-42ed-b0ee-470022ed0da3" x="12" y="60" width="266" height="32"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[DIRECTOR GENERAL DE PENSIONES CIVILES
+DEL ESTADO DE TALAXCALA
+P R E S E N T E]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c72a1f8d-7f1e-407b-ac12-a6c2786e087e" x="13" y="292" width="100" height="12"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATOS DEL AVAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="846ef760-006b-42a8-8347-18a3a98312ee" x="11" y="314" width="310" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Este apartado deberá ser llenado en caso de ser requerido.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4b6efad1-32c3-4ea3-b102-6892ddc43c2d" x="11" y="333" width="62" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[El que suscribe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3fda163b-4d64-4a80-a583-c9da9f546237" x="379" y="333" width="118" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, bajo protesta de decir verdad,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e7030417-7051-4668-b5e3-a1310cc1f398" x="445" y="345" width="52" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; estado civil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8ea065c7-ffcf-4b24-84be-dc79d45ec28f" x="114" y="369" width="99" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; con número de empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="955f84a0-ef20-4ec9-9188-98a79b51c358" x="426" y="357" width="70" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; con clave de RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dd3f1e91-121e-424c-996b-362219a2c5aa" x="280" y="381" width="73" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, de la población de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="89090848-45f9-4f87-a526-bb42cdf29f33" x="258" y="369" width="79" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; número de plaza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="782a2c67-8275-4f8b-b9c9-472f44baefe1" x="11" y="381" width="118" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, con domicilio ubicado en calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0030c5ef-9508-49e1-a4e6-b7fd3d1ce773" x="11" y="345" width="306" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[comparezco para manifestar ser Mexicano (a), lo cual demuestro con el documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0f4b2ea1-420f-432b-a634-a821b42e9216" x="102" y="357" width="115" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; Institución a la que pertenece]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="f5c10f79-bba9-4e29-8021-ddf11fe95cad" x="73" y="393" width="213" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{municipio_aval}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f702a546-d61d-4af4-bb3b-69afd0845f7c" x="341" y="393" width="155" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estado_aval}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d494d958-07a6-4bb0-9b50-92ce6dd9bd3b" x="286" y="393" width="55" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, del Estado de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="869eb7e3-228b-47bb-b8dd-f90c2f0253fb" x="11" y="393" width="62" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[del municipio de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0d3de15f-5c1d-4444-802a-11231f9815be" x="11" y="410" width="486" height="22"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Me comprometo ante Usted, a cubrir el pago del crédito otorgado en caso de que el deudor principal no lo pague y a dar aviso dentro de los tres días hábiles siguientes al día en el que suceda, de la realización de cualquiera de las siguientes acciones:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="35e6d694-97e2-4d15-bf09-b147a40b3727" x="353" y="381" width="144" height="12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{poblacion_aval}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c9cb73c2-6ade-4d90-a476-132dce4c7550" x="11" y="174" width="62" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[del municipio de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a095ca22-0696-44b1-b82d-3dc839a364b3" x="288" y="174" width="55" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, del Estado de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d9b8d95b-d0e0-4be6-ab39-4a2585a1c688" x="11" y="162" width="118" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, con domicilio ubicado en calle]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="492ff57f-711c-4bec-85a1-120d527f2a21" x="416" y="174" width="82" height="12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[me comprometo ante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="924b58bf-7ea3-4119-98f3-d00db5b9f600" x="11" y="186" width="486" height="22"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Usted, a cubrir el pago del crédito que me ha sido otorgado y dar aviso dentro de los tres días hábiles siguientes al día en el que suceda, de la realización de cualquiera de las siguientes acciones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3e5ffbc3-d9e9-41a0-b665-1b0982edb850" x="11" y="126" width="306" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[comparezco para manifestar ser Mexicano (a), lo cual demuestro con el documento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="002940f9-9410-4e3b-8701-d91560cde763" x="116" y="150" width="99" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; con número de empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b9292ef6-4007-4850-b336-48aecfea878c" x="260" y="150" width="79" height="12"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; número de plaza]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="30d4b57d-5aae-4efb-a3c2-9539f3666fa3" x="11" y="114" width="62" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[El que suscribe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0ae8b1de-a967-4d8c-9dc7-cf1585cf9d64" x="428" y="138" width="70" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; con clave de RFC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="129975aa-d588-4092-9479-34f298613180" x="282" y="162" width="73" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, de la población de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="420ac6b2-6aa8-450d-bda6-04c62598f8ba" x="381" y="114" width="118" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[, bajo protesta de decir verdad,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4fd6c362-55ec-4a58-abb0-12622417276c" x="447" y="126" width="52" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; estado civil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dbc05cfe-b003-4a0e-bf77-2bd1780de44a" x="104" y="138" width="115" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[; Institución a la que pertenece]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="af821c94-f9d8-4337-9841-05fd0c157208" x="73" y="114" width="308" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre}+" "+$P{paterno}+" "+$P{materno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="dc911045-7346-4511-a1cd-e3170839f533" x="317" y="126" width="130" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Identificacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9373ffb2-da40-4dd0-9c8d-4f5f5555c4f7" x="11" y="138" width="91" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{EdoCivil}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8a8708ba-8989-4e36-b50a-4e7f0e5d7368" x="219" y="138" width="209" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Institucion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="880a177c-b148-4298-ab60-3a4d3e948ca1" x="11" y="150" width="103" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{rfc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2fe8ed39-cdd8-4799-b7ca-3bcd0b4c333c" x="215" y="150" width="43" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nempleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="adf9f230-a7a0-467b-a7fd-c78e4cc733b6" x="339" y="150" width="157" height="12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nplaza}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a69f2236-f6e7-4aeb-befc-40e3b2aca8ad" x="129" y="162" width="149" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{domicilio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3a5567bd-3bf3-433f-b639-75828e49ae4e" x="355" y="162" width="143" height="12"/>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{poblacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="6b502f07-87de-43ed-bc6b-6700771bd7fc" x="75" y="174" width="211" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{municipio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="8c634ef1-013f-4515-92a7-b8873dee312a" x="346" y="174" width="68" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c0130c66-7fd5-4649-8158-33d5af497988" x="11" y="444" width="226" height="42"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[I. Deje el servicio público;
+II. Cambie de dependencia o entidad donde labora;
+III. Cambie de domicilio, o
+IV. Solicite una licencia sin goce de sueldo.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0caa36e1-907d-471b-8a80-9beb3964ba02" x="11" y="220" width="226" height="42"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[I. Deje el servicio público;
+II. Cambie de dependencia o entidad donde labora;
+III. Cambie de domicilio, o
+IV. Solicite una licencia sin goce de sueldo.
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="12d2ae1c-e09b-4075-8e3c-4dcc0e3aca71" x="28" y="46" width="361" height="13"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NombreDirector}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="da5cab95-25b9-49a5-989f-31b9216f4947" x="12" y="46" width="16" height="13"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="148" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b6f2ecb8-1248-4485-b251-737379f308e1" x="184" y="55" width="346" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="a9e5f6b1-67f1-45af-8962-cc086d13f294" x="299" y="112" width="216" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="6bf46277-28f2-4a86-a0fa-fdaf3870a0ee" x="11" y="110" width="217" height="2"/>
+			</line>
+			<staticText>
+				<reportElement uuid="a2171ee5-4cbc-49ba-84b5-2c464be09cc5" x="11" y="9" width="519" height="43"/>
+				<textElement textAlignment="Justified">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[En este acto quedo (amos) debidamente enterado (s) del alcance legal del compromiso adquirido, de acuerdo con lo dispuesto en el artículo 14 de los Lineamientos para el Otorgamiento y Recuperación de Crédito de Pensiones Civiles del Estado de Tlaxcala, otorgados a los servidores públicos, jubilados y pensionados de la Institución, así como para el intercambio de información sobre créditos, saldos y pagos entre ésta y las citadas dependencias y entidades públicas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8186be9c-cbad-45f3-930d-e19c2d23d15a" x="11" y="55" width="173" height="12"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[En la ciudad de Tlaxcala de Xicohténcatl, a los]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c7a89bc7-7d16-4890-b7df-c2e5f672fc96" x="13" y="116" width="215" height="30"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NOMBRE Y FIRMA DEL SERVIDOR PÚBLICO, JUBILADO O PENSIONADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="18122653-909c-4979-8304-9e81b722b4ba" x="337" y="116" width="141" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NOMBRE Y FIRMA DE AVAL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="16" splitType="Stretch"/>
+	</summary>
+</jasperReport>
