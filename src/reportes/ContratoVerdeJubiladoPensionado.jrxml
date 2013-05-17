@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="solicitudCredito" language="groovy" pageWidth="612" pageHeight="792" columnWidth="612" leftMargin="0" rightMargin="0" topMargin="28" bottomMargin="0" uuid="b5eb42eb-2664-45a4-9b34-8944983f2b07">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="nombre" class="java.lang.String"/>
+	<parameter name="paterno" class="java.lang.String"/>
+	<parameter name="materno" class="java.lang.String"/>
+	<parameter name="NoPagare" class="java.lang.String"/>
+	<parameter name="Tiposolicitante" class="java.lang.String"/>
+	<parameter name="edad" class="java.lang.String"/>
+	<parameter name="identificacion" class="java.lang.String"/>
+	<parameter name="edocivil" class="java.lang.String"/>
+	<parameter name="domicilio" class="java.lang.String"/>
+	<parameter name="localidad" class="java.lang.String"/>
+	<parameter name="municipio" class="java.lang.String"/>
+	<parameter name="estado" class="java.lang.String"/>
+	<parameter name="importe" class="java.lang.String"/>
+	<parameter name="importeletra" class="java.lang.String"/>
+	<parameter name="importedescuento" class="java.lang.String"/>
+	<parameter name="importedescuentoletra" class="java.lang.String"/>
+	<parameter name="nombreT1" class="java.lang.String"/>
+	<parameter name="paternoT1" class="java.lang.String"/>
+	<parameter name="maternoT1" class="java.lang.String"/>
+	<parameter name="edadT1" class="java.lang.String"/>
+	<parameter name="identificacionT1" class="java.lang.String"/>
+	<parameter name="edocivilT1" class="java.lang.String"/>
+	<parameter name="domicilioT1" class="java.lang.String"/>
+	<parameter name="localidadT1" class="java.lang.String"/>
+	<parameter name="municipioT1" class="java.lang.String"/>
+	<parameter name="estadoT1" class="java.lang.String"/>
+	<parameter name="ocupacionT1" class="java.lang.String"/>
+	<parameter name="nombreT2" class="java.lang.String"/>
+	<parameter name="paternoT2" class="java.lang.String"/>
+	<parameter name="maternoT2" class="java.lang.String"/>
+	<parameter name="edadT2" class="java.lang.String"/>
+	<parameter name="identificacionT2" class="java.lang.String"/>
+	<parameter name="edocivilT2" class="java.lang.String"/>
+	<parameter name="domicilioT2" class="java.lang.String"/>
+	<parameter name="localidadT2" class="java.lang.String"/>
+	<parameter name="municipioT2" class="java.lang.String"/>
+	<parameter name="estadoT2" class="java.lang.String"/>
+	<parameter name="ocupacionT2" class="java.lang.String"/>
+	<parameter name="numcuenta" class="java.lang.String"/>
+	<parameter name="numclabe" class="java.lang.String"/>
+	<parameter name="banco" class="java.lang.String"/>
+	<parameter name="numcheque" class="java.lang.String"/>
+	<parameter name="cp" class="java.lang.String"/>
+	<parameter name="fechaletra" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="004c7621-0250-4cf6-8e84-bdf1b3b19ebb" x="361" y="8" width="116" height="13"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTRATO NÚMERO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="d27694a8-d089-43f3-8122-99b195077c85" x="477" y="8" width="119" height="13"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NoPagare}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="651" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d0d42243-5e7f-4539-bf82-78ee43458fd5" x="30" y="6" width="513" height="65"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONTRATO DE PRÉSTAMO CON INTERÉS QUE CELEBRAN POR UNA PARTE, COMO PRESTADOR, PENSIONES CIVILES DEL ESTADO DE TLAXCALA, A TRAVÉS DEL DIRECTOR JURÍDICO, A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ COMO “LA INSTITUCIÓN”, Y POR OTRA PARTE, COMO PRESTATARIO, EL "+$P{nombre}+" "+$P{paterno}+" "+$P{materno}+", A QUIEN EN LO SUCESIVO SE LE DENOMINARÁ COMO EL (A) "+$P{Tiposolicitante}+", ANTE DOS TESTIGOS, AL TENOR DE LAS SIGUIENTES:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0e6b6865-8bb6-4eb0-b7a8-372127b229c2" x="30" y="120" width="374" height="13"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[I. Declaran las partes que para efectos del presente contrato se entenderá por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="187f5090-48f2-42bf-9972-ffc47fe83d56" x="50" y="141" width="493" height="24"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[I. Ley: a la Ley de Pensiones Civiles del Estado de Tlaxcala, publicada en el Periódico Oficial del Gobierno del Estado de Tlaxcala el día 1 de enero de dos mil trece;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3ac16d7f-47f2-4b02-b98f-bab84b86ed84" x="50" y="171" width="493" height="58"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[II. Lineamientos de Crédito: a los “Lineamientos que establecen el destino del crédito, el plazo, el monto máximo del crédito por cada tipo de destino y las formas de garantizar los créditos, que se otorguen a los jubilados, pensionados y servidores públicos”, de conformidad con lo dispuesto en el Capítulo VIII del Título IV de la Ley de Pensiones Civiles del Estado de Tlaxcala, publicados en el Periódico Oficial del Gobierno del Estado de Tlaxcala, el día 31 de enero de dos mil trece, y]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="22e355b8-f861-4366-8a46-66a995d10d7e" x="50" y="235" width="493" height="58"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[II. Lineamientos para el Otorgamiento y Recuperación de Crédito: a los “Lineamientos para el otorgamiento y recuperación de Crédito de Pensiones Civiles del Estado de Tlaxcala, otorgados a los servidores públicos, jubilados y pensionados de la Institución, así como para el intercambio de información sobre créditos, saldos y pagos entre ésta y las citadas dependencias y entidades públicas”, publicados en el Periódico Oficial del Gobierno del Estado de Tlaxcala, el día 31 de enero de dos mil trece.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bbd72239-836c-4202-98c1-581b24346cd3" x="30" y="312" width="144" height="13"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[II. Declara "LA INSTITUCIÓN":]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8338b039-011d-4f37-9f38-66e7f3147328" x="50" y="333" width="493" height="139"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[a) Ser un organismo público descentralizado, con personalidad jurídica y patrimonio propios, cuya organización y funcionamiento se rige por las disposiciones establecidas por su propia Ley, publicada en el Periódico Oficial del Gobierno del Estado de Tlaxcala, el día 1 de enero de dos mil trece;
+
+b) Prestar servicios, siendo uno de ellos el de otorgar créditos a servidores públicos, jubilados y pensionados, en términos de lo establecido en el artículo 3, fracción VII de la Ley en vigor;
+
+c) No tener inconveniente alguno para celebrar el presente contrato y tener su domicilio legal y oficial en Calle Lardizábal número 13, colonia centro de la Ciudad de Tlaxcala, y
+
+d) Tener facultades el Director Jurídico para suscribir el presente contrato en términos del artículo 11, fracción II de los Lineamientos para el Otorgamiento y Recuperación de Crédito.
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2845ea0d-3d4a-463e-ae32-6241949a36cb" x="30" y="490" width="224" height="13"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[III. Declara bajo protesta de decir verdad el(a) "]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e80fc3a3-544c-469f-9ba9-1aa207fc659e" x="254" y="490" width="187" height="13"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Tiposolicitante}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="acec8f5b-6e45-4aed-9d72-51f9b78c62aa" x="50" y="593" width="493" height="40"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[b) Ser su voluntad que “LA INSTITUCIÓN” le otorgue un Crédito Personal Verde, y entiende perfectamente los términos en los cuales éste le será otorgado y el alcance de las obligaciones que adquiere por medio del presente contrato, y]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="76f43edd-3df9-4d03-a069-b293c304a182" x="50" y="524" width="493" height="54"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["a) Llamarse como ha quedado escrito en el proemio del presente contrato, con "+$P{edad}+", años de edad, mexicano(a), lo cual demuestra con la copia de "
++$P{identificacion}+"; estado civil "+$P{edocivil}+", con domicilio en "+$P{domicilio}+", "+$P{localidad}+", del municipio de "+$P{municipio}+", del Estado de "
++$P{estado}+";"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b13aab2a-61fe-41f5-a823-e0235222c5bf" x="199" y="87" width="124" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[D E C L A R A C I O N E S]]></text>
+			</staticText>
+		</band>
+		<band height="714">
+			<staticText>
+				<reportElement uuid="b80c44b4-a3fd-4dfa-bddd-641b363f0435" x="50" y="9" width="493" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[c) Tener la capacidad legal para contratar un crédito y que cuenta con la solvencia económica para cubrirlo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4812fa1-4714-42f0-ae4d-75a5957ab158" x="30" y="36" width="290" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IV. Declaran bajo protesta de decir verdad “LOS TESTIGOS:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8a1e7571-88f2-4a94-9b2c-7880af239352" x="50" y="62" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Testigo 1.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="8a260458-d596-46eb-a61c-f3b4afae5c94" x="150" y="62" width="269" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreT1}+" "+$P{paternoT1}+" "+$P{maternoT1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c9ee739d-2e5c-48ab-bc64-546958a6f459" x="419" y="62" width="22" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[, con]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="16c89390-5188-4ef5-a4d7-cf43e2040517" x="443" y="62" width="100" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{edadT1}+", años de edad,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="930192a0-101d-4645-91ea-86a09169ad40" x="50" y="76" width="493" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["mexicano(a) lo cual demuestra con la copia de, "+$P{identificacionT1}+ ", estado civil, "+$P{edocivilT1}+", con domicilio"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="45a76182-87ac-4d04-8cc6-30a4b91d2d99" x="50" y="90" width="256" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["en "+$P{domicilioT1}+", "+$P{localidadT1}+","]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5dc0ee9f-4276-4ec5-b143-3049217b3b0e" x="306" y="90" width="212" height="14"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["del municipio de, "+$P{municipioT1}+","]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b1b85ac0-2ef0-43fb-9397-f8dc1a96b8c5" x="50" y="104" width="493" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["del estado de, "+$P{estadoT1}+", de ocupación, "+$P{ocupacionT1}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e99a7589-e16a-4fb5-a15f-77d030be4fd5" x="50" y="158" width="256" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["en "+$P{domicilioT2}+", "+$P{localidadT2}+","]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4239d8d3-170b-4579-a2fb-a4c7308fb5d3" x="150" y="130" width="269" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreT2}+" "+$P{paternoT2}+" "+$P{maternoT2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f143bdb1-f675-4e12-a60b-95778ab429db" x="419" y="130" width="22" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[, con]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="963e93c2-081d-4043-b6a6-236fdca254f9" x="306" y="158" width="212" height="14"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["del municipio de, "+$P{municipioT2}+","]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2e87a0db-7883-43a0-bdeb-95f4a25924b4" x="50" y="172" width="493" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["del estado de, "+$P{estadoT2}+", de ocupación, "+$P{ocupacionT2}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e2b901bd-4996-4c16-8d73-a3c087035e2a" x="50" y="144" width="493" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["mexicano(a) lo cual demuestra con la copia de, "+$P{identificacionT2}+ ", estado civil, "+$P{edocivilT2}+", con domicilio"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="342bb113-1f21-4202-8f14-32939420653b" x="50" y="130" width="48" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Testigo 2.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="32eab9cf-c73f-475b-ab9b-c2628a079f5d" x="443" y="130" width="100" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{edadT2}+", años de edad,"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="954469f1-5424-4348-8ae4-ff1650cb9a30" x="101" y="62" width="49" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Llamarse]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a04a4e58-468b-43bc-a322-669dfb1987c8" x="100" y="130" width="49" height="14"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Llamarse]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1ab50939-d9ce-4604-a99b-34bbac2cc0b5" x="30" y="217" width="502" height="28"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Con el objeto de formalizar el contrato de préstamo con interés, conformes las partes con las declaraciones que anteceden, es su voluntad en que dicho Contrato se regirá al tenor de las siguientes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa58d61e-3a04-438b-a709-c54eb881e0ef" x="246" y="258" width="88" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C L Á U S U L A S]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b64be694-045b-4caa-8cb7-4e29301b42f6" x="194" y="298" width="338" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["se obliga a transferir, por concepto de préstamo, al(a) "+$P{Tiposolicitante}+","]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="21644c2d-0582-4222-93e7-25cb4adb3659" x="50" y="298" width="143" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRIMERA. “LA INSTITUCIÓN”]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="a2d368da-c061-416a-949b-a4ddce5d0826" x="50" y="312" width="225" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["C. "+$P{nombre}+" "+$P{paterno}+" "+$P{materno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a16367ee-ca9b-44a1-bd3e-98ef23597f44" x="297" y="312" width="66" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Crédito Verde]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b72efda0-6c96-492f-883e-4d5e6ea8fdbd" x="366" y="312" width="90" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[por la cantidad de $]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5e34342f-0e23-4b23-a28c-6eb801833617" x="277" y="312" width="20" height="14"/>
+				<textElement/>
+				<text><![CDATA[, un]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="cd1ea4b8-4a28-42be-9cbd-248c02ecead1" x="456" y="312" width="74" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{importe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="842b2b04-b080-46e2-a96a-dc7fdb9e9052" x="50" y="326" width="482" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("+$P{importeletra}+" ) en el momento de la celebración del presente contrato,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9eb038a3-3cf7-40c9-9244-a131d3e4b811" x="50" y="340" width="482" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["cuya entrega será depositada mediante transferencia electrónica en la cuenta número "+$P{numcuenta}+", con"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c0c7500b-0d88-4381-a37b-316167884012" x="50" y="354" width="493" height="14"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["clabe bancaria "+$P{numclabe}+" del banco "+$P{banco}+" o mediante cheque número "+$P{numcheque}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="d2bb0461-d790-4707-a6d7-0cc9fcf888b0" x="50" y="368" width="214" height="14"/>
+				<textElement>
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<text><![CDATA[para depósito en cuenta del beneficiario.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cd65eb81-fa5f-40ec-9cc2-9d47f7b96f42" x="50" y="393" width="54" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEGUNDA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="bc30ea34-ffe5-4b28-9ca8-ae3ce918e06c" x="105" y="393" width="425" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El(a) "+$P{Tiposolicitante}+", C. "+$P{nombre}+" "+$P{paterno}+" "+$P{materno}+", se obliga "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="55e5ead2-f2ce-41d4-9fa2-edf4b2db3e52" x="170" y="407" width="360" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{importe}+"( "+$P{importeletra}+" )"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f595eb3c-97d8-4d6a-8f16-e5bfeab57e01" x="50" y="407" width="120" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[a devolver la cantidad de $]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e7495cd2-0f99-4dac-8113-0f534e274192" x="50" y="421" width="8" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="14ba8d49-ca83-4eda-9f17-245e52bdf25c" x="59" y="421" width="91" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[“LA INSTITUCIÓN”]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0f6fd8ca-d8c0-4aec-afd0-5c490906a7cc" x="153" y="421" width="101" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[mediante 24 pagos.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="919ee96e-7ce8-4d14-a712-e718806a5a6c" x="50" y="448" width="480" height="14"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Para efectos de ésta cláusula, el(a) "+$P{Tiposolicitante}+" realizará 24 pagos quincenales iguales con"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="800f121d-ce96-408b-ba14-a63faa80a792" x="50" y="462" width="190" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[descuentos vía nómina, por un monto de $]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="6bc02192-5b19-4e96-aba2-e5c5e2e3419f" x="240" y="462" width="292" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{importedescuento}+" ("+$P{importedescuentoletra}+" ),"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="34c651af-797f-48c7-8e4c-00de4bea97b5" x="50" y="476" width="482" height="27"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[de acuerdo con el calendario de pagos en anexo 1, dentro del término de 12 meses después de haber celebrado el presente contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cc856665-20b5-4855-baf8-85d3d4772598" x="50" y="510" width="480" height="68"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Los pagos que se realicen al amparo del párrafo anterior incluirán el pago al capital y el interés que se haya devengado durante el periodo de cobro. El cálculo de los intereses se realizará aplicando durante el periodo de pago una tasa de interés convencional de 20% anual sobre el saldo insoluto al monto inicial de crédito para el primer pago y, para pagos posteriores, sobre el saldo insoluto resultante al final de cada periodo de pago, de conformidad con lo establecido en los Lineamientos para el Otorgamiento y Recuperación de Crédito.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4f7aea4b-902c-425d-ae1d-3a8982fdb889" x="50" y="583" width="52" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERCERA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="5d3edecd-0f22-4d04-ae99-106958ccd6f3" x="106" y="583" width="424" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Cuando el(a) "+$P{Tiposolicitante}+" realice amortizaciones de capital adicionales a las que"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="ae52fd30-08f4-4a40-ad06-ea34fe03d7e7" x="50" y="597" width="480" height="51"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[correspondan a los pagos quincenales del crédito otorgado, dentro del plazo de 3 días siguientes al pago comparecerá a presentar la ficha de depósito en la Dirección de Finanzas de la Institución para la acreditación del pago y la actualización del saldo respectivo, de acuerdo con  lo establecido en el artículo 26 de los Lineamientos para el Otorgamiento y Recuperación de Crédito.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3798c9b8-d47f-44f9-b7e5-d3965a1e9ba2" x="49" y="663" width="45" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CUARTA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="500ac79d-2ae0-4dd9-a200-68ea1a4ac89a" x="94" y="663" width="435" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[En el caso de incumplimiento de las obligaciones que se deriven de este contrato, las partes ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cf8607d5-5890-4d7d-b136-e178f8dfb2b7" x="49" y="677" width="480" height="35"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[convienen que se generarán intereses moratorios a razón de 2% mensual sobre saldos insolutos a partir del día siguiente de la primera omisión del pago del crédito, de acuerdo con lo establecido en el artículo 5 de los Lineamientos de Crédito.]]></text>
+			</staticText>
+		</band>
+		<band height="714">
+			<staticText>
+				<reportElement uuid="5525ae26-b973-4622-b293-b04b2eaa1481" x="50" y="73" width="44" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[QUINTA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ede47eff-dca2-4315-926f-e50d960b527a" x="95" y="73" width="433" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" A la muerte del(a) "+$P{Tiposolicitante}+" que cuente con un crédito activo, el saldo insoluto del mismo"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="3082efd5-a019-4b34-8660-bd2f1b703f49" x="50" y="166" width="39" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEXTA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="b7fba639-e9b8-4323-b16e-5a867da38f75" x="89" y="166" width="438" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" El (a) "+$P{Tiposolicitante}+" se obliga a informar de manera inmediata a “LA INSTITUCIÓN”, cuando"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="07a87605-343c-4e95-9e30-e020e219cff9" x="50" y="217" width="51" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEPTIMA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="cbb03ecb-4d2f-4499-b497-00e9f960469b" x="101" y="217" width="426" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" El (a) "+$P{Tiposolicitante}+", de encontrarse en la situación a que se refiere la cláusula anterior,"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="011583fc-8f5f-4016-9854-ec7b9904c06b" x="50" y="303" width="477" height="61"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["la liquidación de todo lo que se le adeude en los casos en que así lo establece el artículo 1735 del Código Civil Vigente del Estado Libre y Soberano de Tlaxcala, la Ley publicada en el Periódico Oficial del Gobierno del Estado de Tlaxcala el día 1 de enero de dos mil trece, lo establecido en los Lineamientos de Crédito, así como el incumplimiento de lo señalado en el artículo 14 de los Lineamientos para el Otorgamiento y Recuperación de Crédito, y cuando el(a) "+$P{Tiposolicitante}+":"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="babc7807-7e76-4f21-bf34-db3a82a8930d" x="50" y="289" width="138" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OCTAVA. "LA INSTITUCIÓN”]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9847f63f-3a2c-4e99-810e-a17efb5abc7d" x="189" y="289" width="357" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[tendrá derecho a dar por vencido el calendario de pago y exigir de inmediato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="23d0777c-53aa-4c93-b003-cba6ca426d2f" x="65" y="376" width="7" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="586c464d-9e59-4961-a62c-617dbc08bafb" x="72" y="376" width="471" height="14"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[) Deje de cubrir el importe de una quincena de las estipuladas en la cláusula segunda de este contrato;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b4504232-753b-46db-bbbf-35c6b6990333" x="65" y="395" width="7" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[b]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="38a88b08-4ffd-45ed-a295-91686bcb2046" x="72" y="396" width="474" height="14"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[) Deje de cumplir con cualquiera de las obligaciones a las que se ha obligado en el presente contrato, y]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="29d0c583-ee6c-48d8-bf44-feb44a887742" x="65" y="415" width="7" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[c]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b3b2350b-b61a-4cbe-bfbc-ebe7227c4d72" x="65" y="429" width="100" height="14"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[contrato.]]></text>
+			</staticText>
+			<elementGroup>
+				<staticText>
+					<reportElement uuid="3b5e1156-80c0-4118-8c99-e5e1fc98c8b5" x="72" y="415" width="474" height="14"/>
+					<textElement>
+						<font fontName="Arial" isBold="false"/>
+					</textElement>
+					<text><![CDATA[) Realice cualquier acto en contravención a lo establecido en las cláusulas segunda y sexta del presente]]></text>
+				</staticText>
+			</elementGroup>
+			<staticText>
+				<reportElement uuid="4608aa25-cb60-4f8c-a0eb-b446ecac6209" x="50" y="460" width="47" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOVENA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="557479fe-c3f9-44b1-afee-6c6bce312308" x="97" y="460" width="446" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[La vigencia del contrato iniciará a partir de su fecha de celebración y terminará en la fecha de pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="551f2bb9-d95e-4c2b-8cb2-530bfb5319a3" x="50" y="474" width="477" height="26"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[del último descuento quincenal o, el día en que sean complementadas, en su totalidad, las obligaciones que contraen las partes de este contrato, no siendo aplicable prórroga alguna.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6a2c0cdd-0670-4fe8-954c-67ca96be1b72" x="50" y="511" width="47" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECIMA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3499c91b-9776-40cc-8300-2def8b8c1c0b" x="96" y="511" width="431" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Las partes manifiestan que en la celebración del presente contrato no existe dolo, error, lesión,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a2a628f4-7249-421c-a801-50a0a50da4b4" x="50" y="525" width="477" height="27"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[mala fe, coacción o la existencia de algún vicio en el consentimiento que en este acto otorgan las partes y que pudiesen invalidar el presente contrato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1cc72d04-19cf-4b7a-90a1-99661e9175a9" x="50" y="87" width="477" height="63"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[se pagará con el seguro de vida a que se refiere el artículo 17 de los Lineamientos de Crédito. En su caso, el saldo remanente se pagará con los montos que corresponda recibir a los familiares del fallecido por concepto de seguro de vida y pago póstumo. El titular de la Dirección Administrativa de la Institución, estará obligada a solicitar a “LA INSTITUCIÓN” la información de los créditos a que se refiere el artículo 67, fracción VI de la Ley, a efecto de que pueda efectuarse el descuento para liquidar el saldo remanente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2c7aac3b-dcc7-4185-8c1b-970c9ba0fa45" x="50" y="180" width="477" height="27"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[cambie de domicilio de acuerdo a lo que establece el artículo 14 de los Lineamientos para el Otorgamiento y Recuperación de Crédito.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8f158526-3f35-4bbb-abee-83fecc1b0ba8" x="50" y="231" width="477" height="46"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[autoriza al  titular de las Dirección Administrativa de la Institución,  mediante la carta firmada por las partes en anexo 2 y el presente contrato  a retener de su pensión el importe equivalente al saldo insoluto más intereses, generados y no pagados, del crédito otorgado, a fin de que dicho importe sea pagado a “LA INSTITUCIÓN”.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="491f6892-c8c8-40cd-89ac-f41b6d062aa4" x="50" y="560" width="92" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECIMA PRIMERA.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0bce495d-615a-4974-9433-d71e9d34f190" x="145" y="560" width="382" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Para la interpretación y cumplimiento del presente contrato, las partes se someterán a]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c906551b-413d-4b5f-b024-73e2314c88a8" x="50" y="574" width="477" height="36"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[la jurisdicción y competencia de los tribunales del domicilio de “LA INSTITUCIÓN” en esta Ciudad de Tlaxcala, así como a las leyes vigentes y aplicables al lugar, renunciando a cualquier otro fuero que por razón de sus domicilios presentes o futuros o por cualquier otra causa pudiera corresponderles.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="7940c9dd-07f9-46d3-86bd-e8a5f439bed2" x="50" y="619" width="97" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECIMA SEGUNDA.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="132a8799-4b01-42c4-83b5-19089a86eb03" x="147" y="618" width="380" height="14"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Para todos los efectos legales procedentes el(a) "+$P{Tiposolicitante}+" señala como"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5fc823e7-a4a8-45d4-892d-417a5e5d29d5" x="50" y="633" width="477" height="26"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["domicilio el ubicado en "+$P{domicilio}+","+$P{localidad}+" del Municipio de "+$P{municipio}+", del Estado de "+$P{estado}+", Codigo Postal "+$P{cp}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="683">
+			<textField>
+				<reportElement uuid="b6715ba1-d955-42a2-94a5-77fac588af13" x="50" y="-45" width="477" height="46"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["“LA INSTITUCIÓN” Y EL(A) "+$P{Tiposolicitante}+"reconocen el alcance y efectos  legales de todas y cada una de las obligaciones previstas y derivadas del presente Contrato, en este acto reciben una copia original del mismo y es su voluntad firmarlo de conformidad a los "+$P{fechaletra}+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e4126496-2b9b-44c8-8389-4c99c7b9c41c" x="83" y="187" width="125" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[POR “LA INSTITUCIÓN”]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ac7aae16-32cc-48bb-a5ab-77f3cc4f483d" x="363" y="187" width="37" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EL(A) ]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="ae559bf3-9ff3-437f-bb9f-3df4ed8cab4d" x="400" y="187" width="100" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Tiposolicitante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="484c3ef7-0f40-4767-accd-c14b3ebaf668" x="320" y="308" width="252" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{nombre}+" "+$P{paterno}+" "+$P{materno}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="548f3081-3f54-48d8-b7d6-ad849b0499a3" x="320" y="339" width="252" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE COMPLETO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a8b114ee-cde6-4fad-82c0-983024eba677" x="320" y="332" width="252" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="549a7715-6f64-4c88-a313-7c71e205f5fb" x="35" y="339" width="252" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EL DIRECTOR JURÍDICO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="381bd28f-e7cb-4a61-95b6-bee42b79c4ef" x="35" y="332" width="252" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="b91e789c-6155-4750-a622-354683a67570" x="35" y="368" width="252" height="93"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[         Firma el Jefe del Departamento Jurídico de Pensiones Civiles del Estado de Tlaxcala, con fundamento en el artículo 11, fracción II en relación con el Segundo Transitorio de los “Lineamientos para el otorgamiento y recuperación de Crédito de Pensiones Civiles del Estado de Tlaxcala, otorgados a los servidores públicos, jubilados y pensionados de la Institución, así como para el intercambio de información sobre créditos, saldos y pagos entre ésta y las citadas dependencias y entidades públicas”, publicados en el Periódico Oficial del Gobierno del Estado de Tlaxcala, el día 31 de enero de dos mil trece.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="77621741-d3b8-4f1c-81aa-eb7c6b25d85c" x="83" y="501" width="125" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TESTIGO 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c9b6381d-f369-4132-8537-9ec0d5429e2c" x="363" y="501" width="125" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TESTIGO 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="96f233bd-0362-4d9c-aa3a-080f67ff7f15" x="35" y="637" width="252" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE COMPLETO DEL TESTIGO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="b5236ed0-7ca9-4117-9b0a-71bcab8732bb" x="50" y="630" width="235" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="4e9c4116-1f13-406d-b527-1a3bfb88af10" x="308" y="637" width="252" height="14"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE COMPLETO DEL TESTIGO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="dd1cfb76-d5f9-4379-bb86-22b2a46d5341" x="321" y="630" width="235" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="1f2ece09-e105-44d9-8d2d-b15e2f49cf3d" x="39" y="614" width="11" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="054b0b53-c2d7-499f-a149-a08f072b817a" x="310" y="614" width="11" height="14"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="c6c9dbc3-4c13-4a18-86de-ada657c6b5be" x="53" y="614" width="234" height="14"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreT1}+" "+$P{paternoT1}+" "+$P{maternoT1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="03f19a98-d71a-4cc4-a09d-a5c6a8b65b49" x="324" y="614" width="236" height="14"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreT2}+" "+$P{paternoT2}+" "+$P{maternoT2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50">
+			<break>
+				<reportElement uuid="f4bde15d-f067-4054-8982-4418ddf5f2c8" x="0" y="10" width="100" height="1"/>
+			</break>
+		</band>
+	</pageFooter>
+</jasperReport>
